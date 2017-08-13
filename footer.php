@@ -1,7 +1,10 @@
 <?php
 /**
  * Template for the site footer.
+ *
+ * @package jmw-2016
  */
+
 ?>
 
 </div><!-- #content -->
