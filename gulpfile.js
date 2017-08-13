@@ -8,6 +8,7 @@ gulp.task('browser-sync', function() {
     });
 
     gulp.watch('assets/src/scss/**/*.scss', ['sass']);
+    gulp.watch('*.php').on('change', browserSync.reload);
 });
 
 gulp.task('sass', function() {
