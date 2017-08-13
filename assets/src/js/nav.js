@@ -1,12 +1,12 @@
-import $ from "jquery";
-
-let nav = (()=> {
+const nav = (($)=> {
     return {
         menuWrap: document.querySelector('.menu-primary-navigation-container'),
         menu: document.querySelector('.jmw-main-menu'),
 
         init() {
-            nav.menuWrap.addEventListener('click', nav.menuToggle, false);
+            $(document).ready(()=> {
+                nav.menuWrap.addEventListener('click', nav.menuToggle, false);
+            });
         },
 
         menuToggle(e) {
@@ -42,8 +42,6 @@ let nav = (()=> {
             nav.menuWrap.classList.add('js--nav-open');
         }
     }
-})();
+})(jQuery);
 
-$(document).ready(()=> {
-    nav.init();
-});
+export default nav;

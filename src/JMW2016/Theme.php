@@ -97,6 +97,6 @@ class Theme {
 	 * Register theme scripts.
 	 */
 	public function scripts() {
-		wp_enqueue_script( 'jmw_main_js', get_template_directory_uri() . '/assets/dist/js/scripts.js', [ 'jquery' ], $this->version, true );
+		wp_enqueue_script( 'jmw_main_js', get_template_directory_uri() . '/assets/dist/js/app.js', [ 'jquery' ], $this->version, true );
 	}
 }
