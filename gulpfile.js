@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const path = require('path');
+const babel = require('gulp-babel');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const webpack = require('webpack-stream');
@@ -11,7 +12,7 @@ gulp.task('browser-sync', ()=> {
 
     gulp.watch('assets/src/scss/**/*.scss', ['sass']);
     gulp.watch('assets/src/js/**/*.js', ['js']).on('change', browserSync.reload);
-    gulp.watch('**/*.php').on('change', browserSync.reload);
+    gulp.watch(['./src/**/*.php', '*.php']).on('change', browserSync.reload);
 });
 
 gulp.task('js', ()=> {

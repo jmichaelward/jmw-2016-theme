@@ -69,12 +69,12 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__init__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__setup__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__nav__ = __webpack_require__(2);
 
 
 
-__WEBPACK_IMPORTED_MODULE_0__init__["a" /* default */].init();
+__WEBPACK_IMPORTED_MODULE_0__setup__["a" /* default */].init();
 __WEBPACK_IMPORTED_MODULE_1__nav__["a" /* default */].init();
 
 /***/ }),
