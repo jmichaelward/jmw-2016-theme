@@ -1,9 +1,12 @@
 const gulp = require('gulp');
-const path = require('path');
-const babel = require('gulp-babel');
+const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const webpack = require('webpack-stream');
+
+let autoprefixerOptions = {
+    browsers: ['last 4 versions', '> 5%', 'Firefox ESR']
+};
 
 gulp.task('browser-sync', ()=> {
     browserSync.init({
@@ -25,6 +28,7 @@ gulp.task('sass', ()=> {
     return gulp.src('assets/src/scss/**/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('assets/dist/css'))
+        .pipe(autoprefixer(autoprefixerOptions))
         .pipe(browserSync.stream());
 });
 
