@@ -9,13 +9,7 @@
 
 <?php get_header(); ?>
 
-<?php
-$query = new WP_Query( [
-	'post_type'      => 'post',
-	'category_name'  => 'updates',
-	'posts_per_page' => get_field( 'num_posts' ) ?: 4,
-] );
-?>
+<?php $query = JMW2016\updates_query(); ?>
 
 <main class="site-main">
 	<?php if ( $query->have_posts() ) : ?>

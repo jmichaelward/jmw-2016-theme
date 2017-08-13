@@ -25,12 +25,7 @@
 			endwhile;
 			?>
 
-			<div class="pagination pagination--single">
-				<ul>
-					<li class="next"><?php next_post_link( '%link', '&laquo; %title', true ); ?></li>
-					<li class="prev"><?php previous_post_link( '%link', '%title &raquo;', true ); ?></li>
-				</ul>
-			</div>
+			<?php JMW2016\pagination_single(); ?>
 		</section>
 	<?php endif; ?>
 </main>

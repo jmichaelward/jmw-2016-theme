@@ -20,24 +20,7 @@
 				<?php get_template_part( ! in_category( 'updates' ) ? 'content/loop/category' : 'content/loop/post' ); ?>
 			<?php endwhile; ?>
 
-			<div class="pagination pagination--numeric">
-				<?php
-				global $wp_query;
-
-				$big = 999999999; // need an unlikely integer.
-
-				echo apply_filters( 'derp', paginate_links( [ // @codingStandardsIgnoreLine
-					'base'      => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-					'format'    => '?paged=%#%',
-					'current'   => max( 1, get_query_var( 'paged' ) ),
-					'total'     => $wp_query->max_num_pages,
-					'show_all'  => false,
-					'prev_next' => true,
-					'prev_text' => '&laquo; Newer',
-					'next_text' => 'Older &raquo;',
-				] ) );
-				?>
-			</div>
+			<?php JMW2016\pagination_numeric(); ?>
 		</section>
 	<?php endif; ?>
 </main>

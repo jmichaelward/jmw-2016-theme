@@ -48,7 +48,10 @@ class Theme {
 	 * Require statements for helper functions.
 	 */
 	public function load_helper_functions() {
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . '/template-tags.php';
+		$path = plugin_dir_path( dirname( __FILE__ ) );
+
+		require_once $path . '/template-tags.php';
+		require_once $path . '/query.php';
 	}
 
 	/**
