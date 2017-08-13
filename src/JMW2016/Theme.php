@@ -20,6 +20,10 @@ class Theme {
 	 */
 	public $version = '1.0.0';
 
+	public function __construct() {
+		$this->load_helper_functions();
+	}
+
 	/**
 	 * Setup theme assets and support.
 	 */
@@ -38,6 +42,13 @@ class Theme {
 
 		// Login setup.
 		add_action( 'login_enqueue_scripts', [ $this, 'login_styles' ] );
+	}
+
+	/**
+	 * Require statements for helper functions.
+	 */
+	public function load_helper_functions() {
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . '/template-tags.php';
 	}
 
 	/**

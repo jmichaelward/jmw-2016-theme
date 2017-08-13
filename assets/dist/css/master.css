@@ -46,7 +46,7 @@ table {
   border-spacing: 0; }
 
 html,
-body, .entry__content h4, .entry__content h5, .site-copyright, .site-title, .entry__content h3, .pagination, .section__hdr {
+body, .entry__content h4, .entry__content h5, .site-copyright, .site-details__title, .entry__content h3, .pagination, .section__hdr {
   font-weight: 400; }
 
 .entry__content h1, .entry__content h2, .entry__content h6, .entry__hd, .entry__content a, .page__all-updates a, .pagination a {
@@ -56,7 +56,7 @@ html,
 body, .entry__content h4, .entry__content h5, .site-copyright {
   font-family: "Lato", sans-serif; }
 
-.site-title, .entry__content h3, .pagination, .section__hdr, .entry__content h1, .entry__content h2, .entry__content h6, .entry__hd {
+.site-details__title, .entry__content h3, .pagination, .section__hdr, .entry__content h1, .entry__content h2, .entry__content h6, .entry__hd {
   font-family: "Montserrat", sans-serif; }
 
 .entry__content a, .page__all-updates a, .pagination a {
@@ -108,56 +108,10 @@ img {
   /* */ }
 
 /*--------------------------------------------------------------------------------------------------------------------||
-||  Header                                                                                                            ||
+||  Site Branding                                                                                                     ||
 ||--------------------------------------------------------------------------------------------------------------------*/
-/*  TYPOGRAPHY: Header
-------------------------------------------------------------*/
-.site-description {
-  font-size: 1rem; }
-  @media (min-width: 640px) {
-    .site-description {
-      font-size: 1.125rem;
-      letter-spacing: 0.02em; } }
-
-.site-details {
-  line-height: 1.2; }
-
-.site-title {
-  font-size: 1.0625rem;
-  letter-spacing: 0.02em;
-  line-height: 1;
-  text-transform: uppercase; }
-  @media (min-width: 640px) {
-    .site-title {
-      font-size: 2rem; } }
-
-/*  DECORATION: Header
-------------------------------------------------------------*/
 .site-branding {
-  border-bottom: 1px solid #d2d2d2; }
-
-.site-logo {
-  -moz-transition: background-color 300ms ease-in;
-  -webkit-transition: background-color 300ms ease-in;
-  transition: background-color 300ms ease-in;
-  background: #222222 url("../img/jw_monogram_trans.png") top left no-repeat; }
-  .site-logo:hover {
-    background-color: #d20000;
-    -moz-transition: background-color 300ms ease-in;
-    -webkit-transition: background-color 300ms ease-in;
-    transition: background-color 300ms ease-in; }
-  .site-logo.nav-open {
-    background-color: #d20000;
-    -moz-transition: background-color 300ms ease-in;
-    -webkit-transition: background-color 300ms ease-in;
-    transition: background-color 300ms ease-in; }
-
-.site-logo-container {
-  background-color: white; }
-
-/*  LAYOUT: Header
-------------------------------------------------------------*/
-.site-branding {
+  border-bottom: 1px solid #d2d2d2;
   margin: 0 auto 1.5rem 0;
   position: relative;
   padding: 50px 10px 10px 10px;
@@ -173,14 +127,7 @@ img {
       padding: 0 0 0.5rem 1rem;
       width: 90%; } }
 
-.site-details {
-  position: relative; }
-  @media (min-width: 640px) {
-    .site-details {
-      margin-left: 100px;
-      z-index: 2; } }
-
-.site-home-link {
+.site-branding__home-link {
   bottom: 0;
   display: block;
   left: 0;
@@ -189,7 +136,11 @@ img {
   right: 0;
   top: 0; }
 
-.site-logo {
+.site-branding__logo {
+  -moz-transition: background-color 300ms ease-in;
+  -webkit-transition: background-color 300ms ease-in;
+  transition: background-color 300ms ease-in;
+  background: #222222 url("../img/jw_monogram_trans.png") top left no-repeat;
   -moz-background-size: 95px 79px;
   -webkit-background-size: 95px 79px;
   background-size: 95px 79px;
@@ -202,15 +153,53 @@ img {
   width: 95px;
   margin: auto;
   z-index: 1; }
+  .site-branding__logo:hover {
+    background-color: #d20000;
+    -moz-transition: background-color 300ms ease-in;
+    -webkit-transition: background-color 300ms ease-in;
+    transition: background-color 300ms ease-in; }
+  .site-branding__logo.nav-open {
+    background-color: #d20000;
+    -moz-transition: background-color 300ms ease-in;
+    -webkit-transition: background-color 300ms ease-in;
+    transition: background-color 300ms ease-in; }
 
-.site-logo-container {
+.site-branding__logo-container {
+  background-color: white;
   float: left;
   top: 0;
   width: 105px; }
   @media (min-width: 640px) {
-    .site-logo-container {
+    .site-branding__logo-container {
       left: 0;
       position: absolute; } }
+
+/*--------------------------------------------------------------------------------------------------------------------||
+||  Site Details                                                                                                      ||
+||--------------------------------------------------------------------------------------------------------------------*/
+.site-details {
+  line-height: 1.2;
+  position: relative; }
+  @media (min-width: 640px) {
+    .site-details {
+      margin-left: 100px;
+      z-index: 2; } }
+
+.site-details__description {
+  font-size: 1rem; }
+  @media (min-width: 640px) {
+    .site-details__description {
+      font-size: 1.125rem;
+      letter-spacing: 0.02em; } }
+
+.site-details__title {
+  font-size: 1.0625rem;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-transform: uppercase; }
+  @media (min-width: 640px) {
+    .site-details__title {
+      font-size: 2rem; } }
 
 /*--------------------------------------------------------------------------------------------------------------------||
 ||  Navigation                                                                                                        ||

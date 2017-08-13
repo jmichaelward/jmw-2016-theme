@@ -1,63 +1,9 @@
 /*--------------------------------------------------------------------------------------------------------------------||
-||  Header                                                                                                            ||
+||  Site Branding                                                                                                     ||
 ||--------------------------------------------------------------------------------------------------------------------*/
-
-/*  TYPOGRAPHY: Header
-------------------------------------------------------------*/
-.site-description {
-  font-size: 1rem;
-
-  @include bp($bp__phone--lg) {
-    font-size: 1.125rem;
-    letter-spacing: 0.02em;
-  }
-}
-
-.site-details {
-  line-height: 1.2;
-}
-
-.site-title {
-  @extend %font-sans-alt;
-  font-size: 1.0625rem;
-  letter-spacing: 0.02em;
-  line-height: 1;
-  text-transform: uppercase;
-
-  @include bp($bp__phone--lg) {
-    font-size: 2rem;
-  }
-}
-
-/*  DECORATION: Header
-------------------------------------------------------------*/
-.site-branding {
-  border-bottom: 1px solid $color-border__heading;
-}
-
-.site-logo {
-  @include transition(background-color 300ms ease-in);
-  background: $color-text-primary url('../img/jw_monogram_trans.png') top left no-repeat;
-
-  &:hover {
-    background-color: $color-background-accent;
-    @include transition(background-color 300ms ease-in);
-  }
-
-  &.nav-open {
-    background-color: $color-background-accent;
-    @include transition(background-color 300ms ease-in);
-  }
-}
-
-.site-logo-container {
-  background-color: white;
-}
-
-/*  LAYOUT: Header
-------------------------------------------------------------*/
 .site-branding {
   @include clearfix;
+  border-bottom: 1px solid $color-border__heading;
   margin: 0 auto 1.5rem 0;
   position: relative;
   padding: 50px 10px 10px 10px;
@@ -70,16 +16,7 @@
   }
 }
 
-.site-details {
-  position: relative;
-
-  @include bp($bp__phone--lg) {
-    margin-left: 100px;
-    z-index: 2;
-  }
-}
-
-.site-home-link {
+.site-branding__home-link {
   bottom: 0;
   display: block;
   left: 0;
@@ -89,7 +26,9 @@
   top: 0;
 }
 
-.site-logo {
+.site-branding__logo {
+  @include transition(background-color 300ms ease-in);
+  background: $color-text-primary url('../img/jw_monogram_trans.png') top left no-repeat;
   @include background-size(95px, 79px);
   display: inline-block;
   height: 79px;
@@ -100,9 +39,20 @@
   width: 95px;
   margin: auto;
   z-index: 1;
+
+  &:hover {
+    background-color: $color-background-accent;
+    @include transition(background-color 300ms ease-in);
+  }
+
+  &.nav-open {
+    background-color: $color-background-accent;
+    @include transition(background-color 300ms ease-in);
+  }
 }
 
-.site-logo-container {
+.site-branding__logo-container {
+  background-color: white;
   float: left;
   top: 0;
   width: 105px;
@@ -110,5 +60,39 @@
   @include bp($bp__phone--lg) {
     left: 0;
     position: absolute;
+  }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------||
+||  Site Details                                                                                                      ||
+||--------------------------------------------------------------------------------------------------------------------*/
+.site-details {
+  line-height: 1.2;
+  position: relative;
+
+  @include bp($bp__phone--lg) {
+    margin-left: 100px;
+    z-index: 2;
+  }
+}
+
+.site-details__description {
+  font-size: 1rem;
+
+  @include bp($bp__phone--lg) {
+    font-size: 1.125rem;
+    letter-spacing: 0.02em;
+  }
+}
+
+.site-details__title {
+  @extend %font-sans-alt;
+  font-size: 1.0625rem;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-transform: uppercase;
+
+  @include bp($bp__phone--lg) {
+    font-size: 2rem;
   }
 }

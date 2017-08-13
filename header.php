@@ -26,27 +26,22 @@
 
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'jmw2016' ); ?></a>
 
-	<nav class="main-navigation__wrapper">
+	<nav class="main-navigation">
 		<div class="main-navigation__toggle"></div>
-		<?php
-		wp_nav_menu( [
-			'menu_class'     => 'jmw-main-menu',
-			'theme-location' => 'main-menu',
-		] );
-		?>
+		<?php JMW2016\main_menu(); ?>
 	</nav>
 
 	<div class="page__wrapper">
 		<header class="site-branding">
-			<div class="site-logo-container">
-				<div class="site-logo">
-					<a class="site-home-link" href="<?php echo esc_url( home_url() ); ?>"></a>
+			<div class="site-branding__logo-container">
+				<div class="site-branding__logo">
+					<a class="site-branding__home-link" href="<?php echo esc_url( home_url() ); ?>"></a>
 				</div>
 			</div>
 
 			<div class="site-details">
-				<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+				<h1 class="site-details__title"><?php bloginfo( 'name' ); ?></h1>
+				<h2 class="site-details__description"><?php bloginfo( 'description' ); ?></h2>
 			</div>
 		</header>
 
