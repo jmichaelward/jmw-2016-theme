@@ -1,3 +1,12 @@
+<?php
+/**
+ * Template for the static front page.
+ *
+ * @package jmw-2016
+ */
+
+?>
+
 <?php get_header(); ?>
 
 <?php

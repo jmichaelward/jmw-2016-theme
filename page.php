@@ -1,3 +1,12 @@
+<?php
+/**
+ * The default page template.
+ *
+ * @package jmw-2016
+ */
+
+?>
+
 <?php get_header(); ?>
 
 <main class="site-main">

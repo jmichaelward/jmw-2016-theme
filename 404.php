@@ -1,3 +1,12 @@
+<?php
+/**
+ * Template for the 404 page.
+ *
+ * @package jmw-2016
+ */
+
+?>
+
 <?php get_header(); ?>
 
 <main class="site-main">

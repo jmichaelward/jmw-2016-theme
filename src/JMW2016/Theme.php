@@ -1,4 +1,9 @@
 <?php
+/**
+ * The main theme class. Registers theme assets, menus, and fonts.
+ *
+ * @package JMW2016
+ */
 
 namespace JMW2016;
 

@@ -1,3 +1,12 @@
+<?php
+/**
+ * The default theme template.
+ *
+ * @package jmw-2016
+ */
+
+?>
+
 <?php get_header(); ?>
 
 <?php

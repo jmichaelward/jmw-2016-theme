@@ -1,3 +1,12 @@
+<?php
+/**
+ * The default post template.
+ *
+ * @package jmw-2016
+ */
+
+?>
+
 <?php get_header(); ?>
 
 <main class="site-main">

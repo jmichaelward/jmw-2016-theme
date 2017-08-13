@@ -1,3 +1,12 @@
+<?php
+/**
+ * Template for post archives.
+ *
+ * @package jmw-2016
+ */
+
+?>
+
 <?php get_header(); ?>
 
 <main class="site-main">
